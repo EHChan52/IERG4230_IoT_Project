@@ -170,7 +170,7 @@ void loop() {
   display.setCursor(0, 10);
   display.println("Module 2:");
   display.setCursor(0, 30);
-  if(localtemperature < 15 || localtemperature > 30 || localhumidity > 75 || localsensorgasintensity > 600 || locallightintensity < 30 || locallightintensity > 300){
+  if(TempGet < 15 || TempGet > 30 || HumiGet > 75 || GasInteGet > 600 || LumenGet < 30 || LumenGet > 300){
     if(TempGet < 15){
       display.println("too cold!");
       display.display();
