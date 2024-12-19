@@ -23,7 +23,7 @@ unsigned long slaveChannelNumber = 2787819; // replace with your ThingSpeak chan
 const char* masterWriteAPIKey = "WWZW447IN3G56NJV"; // replace with your ThingSpeak Write API Key
 const char* slaveReadAPIKey = "CKKSKLF3FM82JKMY"; // replace with your ThingSpeak Read API Key
 int statusCode = 0;
-int field[4] = {1,2,3,4};
+int field[5] = {1,2,3,4,5};
 float TempGet = 0;
 float HumiGet = 0;
 float LumenGet = 0;
@@ -134,7 +134,7 @@ void loop() {
   display.println("Module 1:");
   display.setCursor(0, 30);
   if(localtemperature < 15 || localtemperature > 30 || localhumidity > 75 || localsensorgasintensity > 600 || locallightintensity < 30 || locallightintensity > 300){
-    if(localtemperature < 15){
+    if(localtemperature < 10){
       display.println("too cold!");
       display.display();
     }
